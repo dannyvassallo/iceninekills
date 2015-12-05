@@ -78,11 +78,13 @@ $("#book").bind("turning", function(event, page, view) {
     stopVideos();
 });
 
-// RESIZE BOOK BORDER
+// // RESIZE BOOK BORDER
 $(function(){
     resizeBook();
 });
+
 $(window).resize(resizeBook);
+
 function resizeBook(){
     var bookWidth = $('#book').width();
     var bookHeight = $('#book').height();
@@ -115,8 +117,9 @@ initVideos();
 
 // STOP YOUTUBE EMBEDS
 function stopVideos(){
+    initVideos();
     jQuery("iframe").each(function() {
-      jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
     });
 }
 
