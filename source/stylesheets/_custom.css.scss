@@ -1,2 +1,119 @@
-// Add custom css here or create more partials
-// and import them in all.css.scss!
+.full-w{
+  width: 100%;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #333;
+}
+
+#book-wrap {
+    overflow: hidden;
+}
+
+/* helpers */
+
+.t {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tc {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.rel {
+    position: relative;
+}
+
+/* book */
+
+.book {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.book .page {
+    height: 100%;
+}
+
+.book .page .page-img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.overlay{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.evenlay{
+  background:-webkit-gradient(linear, left top, right top, color-stop(0.95, transparent), color-stop(1, #000));
+  background-image:-webkit-linear-gradient(left, transparent 95%, #000 100%);
+  background-image:-moz-linear-gradient(left, transparent 95%, #000 100%);
+  background-image:-ms-linear-gradient(left, transparent 95%, #000 100%);
+  background-image:-o-linear-gradient(left, transparent 95%, #000 100%);
+  background-image:linear-gradient(left, transparent 95%, #000 100%);
+}
+
+.oddlay{
+  background:-webkit-gradient(linear, right top, left top, color-stop(0.95, transparent), color-stop(1, #000));
+  background-image:-webkit-linear-gradient(right, transparent 95%, #000 100%);
+  background-image:-moz-linear-gradient(right, transparent 95%, #000 100%);
+  background-image:-ms-linear-gradient(right, transparent 95%, #000 100%);
+  background-image:-o-linear-gradient(right, transparent 95%, #000 100%);
+  background-image:linear-gradient(right, transparent 95%, #000 100%);
+}
+
+#book-background{
+  position: relative;
+  z-index: -1;
+  margin: 0 auto;
+  text-align: center;
+  img{
+    box-shadow: -1px 16px 38px 0px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.video-wrapper{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  z-index: 99999;
+  .stream-embed{
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.featured-wrapper{
+  position: absolute;
+  bottom: 12%;
+  left:0;
+  width: 100%;
+  z-index: 99999;
+  .featured-item{
+    max-width: 28%;
+    margin: 0 auto;
+  }
+}

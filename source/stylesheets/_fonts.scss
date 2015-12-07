@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'english_towneregular';
+    src: url('../fonts/englishtowne-webfont.eot');
+    src: url('../fonts/englishtowne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/englishtowne-webfont.woff2') format('woff2'),
+         url('../fonts/englishtowne-webfont.woff') format('woff'),
+         url('../fonts/englishtowne-webfont.ttf') format('truetype'),
+         url('../fonts/englishtowne-webfont.svg#english_towneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.english{
+ font-family: 'english_towneregular';
+}
