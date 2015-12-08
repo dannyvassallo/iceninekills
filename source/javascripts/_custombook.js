@@ -77,7 +77,9 @@
 $("#book").bind("turning", function(event, page, view) {
     stopVideos();
     if(page == 4){
-        $('img[usemap]').rwdImageMaps();
+        setTimeout(function(){
+            $('img[usemap]').rwdImageMaps();
+        }, 500);
     }
 });
 
