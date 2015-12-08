@@ -9,6 +9,8 @@ html, body {
 
 body {
     background-color: #333;
+    background-image: url('https://s3.amazonaws.com/myfangate.com/iceninekills/texture.jpg');
+    background-repeat: repeat;
 }
 
 #book-container{
@@ -190,4 +192,11 @@ body {
     border-radius: 5px;
     box-shadow: -1px 16px 38px 0px rgba(0, 0, 0, 0.7);
   }
+}
+
+.logo{
+  margin-top: 7%;
+  margin-bottom: -20%;
+  z-index: -6;
+  position: relative;
 }
