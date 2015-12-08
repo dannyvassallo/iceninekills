@@ -137,7 +137,7 @@ body {
   margin-right: auto;
 }
 
-.contest-mobile{
+.mobile-entry{
   display: none;
 }
 
@@ -145,7 +145,7 @@ body {
   .large-prize{
     display:none;
   }
-  .contest-mobile{
+  .mobile-entry{
     display: block;
   }
 }
@@ -160,5 +160,34 @@ body {
     &:focus{
       outline: none;
     }
+  }
+}
+
+.contest-mobile{
+  #contest-wrapper{
+    width: 100%;
+  }
+  .contest{
+    max-width: 100%;
+  }
+  input{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+.mobile-entry{
+  h2{font-family: 'english_towneregular';}
+  h1,h2,label,p,h4{
+    background: linear-gradient(330deg, #deca69 0%, #cfb75a 25%, #ebe085 50%, #cfb75a 75%, #deca69 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .row{
+    background-image: url('https://s3.amazonaws.com/myfangate.com/iceninekills/repeatingleather.jpg');
+    background-repeat: repeat;
+    border-radius: 5px;
+    box-shadow: -1px 16px 38px 0px rgba(0, 0, 0, 0.7);
   }
 }
