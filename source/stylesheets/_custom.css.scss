@@ -11,6 +11,10 @@ body {
     background-color: #333;
 }
 
+#book-container{
+  margin: 5% auto;
+}
+
 #book-wrap {
     overflow: hidden;
 }
@@ -130,4 +134,17 @@ body {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contest-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1440px) {
+  .large-prize{
+    display:none;
+  }
+  .contest-mobile{
+    display: block;
+  }
 }

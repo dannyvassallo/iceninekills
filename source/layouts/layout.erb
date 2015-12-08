@@ -12,7 +12,6 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial "partials/navbar" %>
     <%= yield %>
 
     <!-- Javascripts -->
@@ -45,7 +44,7 @@
       // contest mover
       function checkScreen(){
         var docW = $(document).width();
-        if(docW < 992){
+        if(docW < 1440){
           jQuery('.contest').detach().appendTo('.contest-mobile');
         } else {
           // alert('woot');
