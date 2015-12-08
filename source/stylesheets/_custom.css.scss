@@ -9,6 +9,13 @@ html, body {
 
 body {
     background-color: #333;
+    background-image: url('https://s3.amazonaws.com/myfangate.com/iceninekills/texture.jpg');
+    background-repeat: repeat;
+}
+
+#book-container{
+  margin: 5% auto;
+  max-width: 1500px;
 }
 
 #book-wrap {
@@ -116,4 +123,80 @@ body {
     max-width: 28%;
     margin: 0 auto;
   }
+}
+
+.contest-wrap{
+  position: absolute;
+  top: 65%;
+  width: 100%;
+}
+
+.contest{
+  position: relative;
+  z-index: 9999;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-entry{
+  display: none;
+}
+
+@media only screen and (max-width: 1440px) {
+  .large-prize{
+    display:none;
+  }
+  .mobile-entry{
+    display: block;
+  }
+}
+
+#toc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  area{
+    z-index: 99999;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.contest-mobile{
+  #contest-wrapper{
+    width: 100%;
+  }
+  .contest{
+    max-width: 100%;
+  }
+  input{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+.mobile-entry{
+  h2{font-family: 'english_towneregular';}
+  h1,h2,label,p,h4{
+    background: linear-gradient(330deg, #deca69 0%, #cfb75a 25%, #ebe085 50%, #cfb75a 75%, #deca69 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .row{
+    background-image: url('https://s3.amazonaws.com/myfangate.com/iceninekills/repeatingleather.jpg');
+    background-repeat: repeat;
+    border-radius: 5px;
+    box-shadow: -1px 16px 38px 0px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.logo{
+  margin-top: 7%;
+  margin-bottom: -20%;
+  z-index: -6;
+  position: relative;
 }

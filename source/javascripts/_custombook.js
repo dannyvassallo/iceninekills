@@ -76,6 +76,11 @@
 // PAUSE YOUTUBE EMBEDS ON PAGE TURN
 $("#book").bind("turning", function(event, page, view) {
     stopVideos();
+    if(page == 4){
+        setTimeout(function(){
+            $('img[usemap]').rwdImageMaps();
+        }, 500);
+    }
 });
 
 // // RESIZE BOOK BORDER
@@ -141,3 +146,15 @@ function isElementInViewport (el) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
     );
 }
+
+$(function(){
+    $('#book').turn('disable', true);
+    $('img[usemap]').rwdImageMaps();
+});
+
+$(document).ready(function(e) {
+    $(document).on('click', 'area', function() {
+        var pageNum = $(this).attr('data-pagenum');
+        $("#book").turn("page", pageNum);
+    });
+});

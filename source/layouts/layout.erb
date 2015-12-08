@@ -6,16 +6,61 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= partial "partials/meta-seo" %>    
+    <%= partial "partials/meta-seo" %>
     <!-- Stylesheets -->
     <%= stylesheet_link_tag "all" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial "partials/navbar" %>
     <%= yield %>
 
     <!-- Javascripts -->
     <%= javascript_include_tag  "all" %>
+    <script>
+      // init contest //
+      $(".contest").shareContestFB({
+        context: {
+          fbAppId: "198516403817300",
+          fbShareTitle: "Welcome To The Fearless Summer",
+          fbShareLink: "http://fngt.it/Fearlesssummer15/f",
+          fbImageUrl: "https://s3.amazonaws.com/myfangate.com/fearlesssummer16/phase2/share.jpg",
+          fbSubText: "http://fngt.it/Fearlessatapmas/f",
+          fbDialog: "Enter to win weekly prizes!",
+          formActionUrlId: "1pnk41C91N92eL0QDEhemc48p64a58xvbZm1JQDdqt_U",
+          firstNameId: "749925490",
+          lastNameId: "453795809",
+          emailId: "1493557255",
+          optInId: "583147646",
+          rulesId: "1082888376",
+          fbCheckId: "701792494",
+          twitterCheckId: "1730686214",
+          contactName: "Fearless Records",
+          rulesLink: "http://google.com",
+          thankYouMsg: "Thanks for entering!",
+        }
+      });
+
+
+      // contest mover
+      function checkScreen(){
+        var docW = $(document).width();
+        if(docW < 1440){
+          jQuery('.contest').detach().appendTo('.contest-mobile');
+        } else {
+          // alert('woot');
+          jQuery('.contest').detach().appendTo('.contest-wrap');
+        }
+      }
+
+      $(function(){
+        checkScreen();
+      });
+
+      $(window).resize(function(){
+        checkScreen();
+      });
+
+
+    </script>
   </body>
 </html>
