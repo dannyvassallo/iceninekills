@@ -76,6 +76,9 @@
 // PAUSE YOUTUBE EMBEDS ON PAGE TURN
 $("#book").bind("turning", function(event, page, view) {
     stopVideos();
+    if(page == 4){
+        $('img[usemap]').rwdImageMaps();
+    }
 });
 
 // // RESIZE BOOK BORDER
@@ -144,4 +147,12 @@ function isElementInViewport (el) {
 
 $(function(){
     $('#book').turn('disable', true);
+    $('img[usemap]').rwdImageMaps();
+});
+
+$(document).ready(function(e) {
+    $(document).on('click', 'area', function() {
+        var pageNum = $(this).attr('data-pagenum');
+        $("#book").turn("page", pageNum);
+    });
 });

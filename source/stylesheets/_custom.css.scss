@@ -13,6 +13,7 @@ body {
 
 #book-container{
   margin: 5% auto;
+  max-width: 1500px;
 }
 
 #book-wrap {
@@ -146,5 +147,18 @@ body {
   }
   .contest-mobile{
     display: block;
+  }
+}
+
+#toc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  area{
+    z-index: 99999;
+    &:focus{
+      outline: none;
+    }
   }
 }
