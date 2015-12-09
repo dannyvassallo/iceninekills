@@ -227,3 +227,24 @@ body {
     display: none !important;
   }
 }
+
+i.fa {
+    padding-right: 0 !important;
+}
+
+.footer{
+  margin-top: 5%;
+  .fa-circle{
+    border-radius: 50%;
+    color: transparent;
+    background: linear-gradient(330deg, #deca69 0%, #cfb75a 25%, #ebe085 50%, #cfb75a 75%, #deca69 100%) !important;
+  }
+  .fa-stack-1x{
+    color: black;
+    opacity: .6;
+  }
+}
+
+.fearlesslogo{
+  margin-left: 10px;
+}
