@@ -3916,6 +3916,8 @@ function validateShare(){
       submitted = true;
       $('#book').turn('disabled', false);
       $('#book').turn('next');
+      $('#next-button').fadeIn();
+      $('#prev-button').fadeIn();
     }
   }
   else if (facebookCheck > 0 && twitterCheck == 0) {
@@ -3928,6 +3930,8 @@ function validateShare(){
       submitted = true;
       $('#book').turn('disabled', false);
       $('#book').turn('next');
+      $('#next-button').fadeIn();
+      $('#prev-button').fadeIn();
     }
   }
   else if (facebookCheck == 0 && twitterCheck > 0) {
@@ -3939,6 +3943,8 @@ function validateShare(){
       submitted = true;
       $('#book').turn('disabled', false);
       $('#book').turn('next');
+      $('#next-button').fadeIn();
+      $('#prev-button').fadeIn();
     }
   }
 }
@@ -3992,3 +3998,25 @@ function validateShare(){
 /////////////////////////////////////
 //        END GENERATE FORM        //
 /////////////////////////////////////
+
+$('#prev-button').on('click', function(){
+  $('#book').turn('previous');
+  hideBtn('#prev-button', 3);
+  hideBtn('#next-button', 26);
+});
+
+$('#next-button').on('click', function(){
+  $('#book').turn('next');
+  hideBtn('#prev-button', 3);
+  hideBtn('#next-button', 26);
+});
+
+
+function hideBtn(el, page){
+  var pageNum = $("#book").turn("page");
+  if (pageNum == page) {
+    $(el).fadeOut();
+  } else {
+    $(el).fadeIn();
+  }
+}

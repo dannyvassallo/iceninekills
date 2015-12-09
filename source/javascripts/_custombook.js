@@ -79,7 +79,7 @@ $("#book").bind("turning", function(event, page, view) {
     if(page == 4){
         setTimeout(function(){
             $('img[usemap]').rwdImageMaps();
-        }, 500);
+        }, 800);
     }
 });
 
@@ -158,3 +158,18 @@ $(document).ready(function(e) {
         $("#book").turn("page", pageNum);
     });
 });
+
+
+// // RESIZE BOOK NAV
+$(function(){
+    resizeBookNav();
+});
+
+$(window).resize(resizeBookNav);
+
+function resizeBookNav(){
+    var bookWidth = $('#book').width();
+    var bookHeight = $('#book').height() + 100;
+    $('#prev-button').css('top',-Math.abs(bookHeight/2));
+    $('#next-button').css('top',-Math.abs(bookHeight/2));
+}

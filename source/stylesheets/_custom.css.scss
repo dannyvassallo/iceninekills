@@ -178,7 +178,6 @@ body {
   }
 }
 
-
 .mobile-entry{
   h2{font-family: 'english_towneregular';}
   h1,h2,label,p,h4{
@@ -199,4 +198,32 @@ body {
   margin-bottom: -20%;
   z-index: -6;
   position: relative;
+}
+
+// navigation
+#prev-button, #next-button{
+  display: none;
+  position: relative;
+  width: 100px;
+  top: -100px;
+  height: 100px;
+  transition: all .2s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+#next-button{
+  float: right;
+  cursor: pointer;
+}
+#prev-button{
+  float: left;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  #prev-button, #next-button{
+    display: none !important;
+  }
 }
